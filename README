@@ -1,0 +1,12 @@
+Zuul
+====
+
+Gatekeeper for Raspberry Pi and other embedded devices
+
+Dependencies
+------------
+
+ - supervisor
+ - autossh
+ - vim
+ - tmux
