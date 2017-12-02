@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Starting ssh tunnel"
+
+REMOTE_PORT="23000"
+REMOTE_USER="strider"
+REMOTE_HOST="strycore.com"
+
+autossh -M 5122 -N -R $REMOTE_PORT:localhost:22 $REMOTE_USER@$REMOTE_HOST
