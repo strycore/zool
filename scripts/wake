@@ -1,0 +1,3 @@
+#!/bin/bash
+
+wakeonlan $(cat /home/pi/mac-addresses/$1) &> /home/pi/log/wakeonlan.log
