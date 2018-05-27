@@ -16,3 +16,26 @@ Zool can be used to:
 - VPN into the network
 - Take action on camera/microphone activity
 - Send notifications to mobile devices
+
+One of Zool's goal is to provide a stable and permantent connection to a remote
+location, without having to configure the remote network (if you want to use
+the VPN feature, you'l still have to open an UDP port). In order to achieve
+this, Zool requires a server to connect to (Also refered to as the mothership).
+The mothership can be any machine that is permanently available on the
+internet, any cheap VPS will do, the important is being always connected, specs
+such as RAM, CPU or disk space are irrelevant here.
+
+Zool uses a combo of supervisor and autossh to keep the connection with the
+mothership alive at all times, it just needs to be powered on to be available.
+
+
+
+Tools used to build Zool
+------------------------
+
+Raspbian: https://www.raspbian.org/
+Supervisor: http://supervisord.org/
+AutoSSH: http://www.harding.motd.ca/autossh/
+OpenVPN: https://openvpn.net/
+Mosh: https://mosh.org/
+Puhover: https://pushover.net/
