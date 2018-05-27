@@ -8,5 +8,5 @@ setup: deps
 install:
 	cp scripts/tunnel /usr/local/bin/
 	cp scripts/wake /usr/local/bin/
-	cp supervisor/zuul.conf /etc/supervisor/conf.d/
+	cp supervisor/zool.conf /etc/supervisor/conf.d/
 
