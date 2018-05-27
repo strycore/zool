@@ -3,3 +3,16 @@ Zool
 
 Gatekeeper for Raspberry Pi and other embedded devices
 
+WARNING: Zool is currently in a reserch stage and most of its features are not
+implemented yet.
+
+Zool is a system targeted at single board devices and providing monitoring and
+remote access solutions to a local network.
+
+Zool can be used to:
+
+- Turn on and off machines on the network
+- Monitor for new devices on a network
+- VPN into the network
+- Take action on camera/microphone activity
+- Send notifications to mobile devices
