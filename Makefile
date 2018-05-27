@@ -1,9 +1,9 @@
 deps:
-	apt install -y supervisor autossh wakeonlan
+	apt install -y supervisor autossh wakeonlan python3-dev python3-setuptools
 
 setup: deps
-	mkdir -p /home/pi/mac-addresses
-	mkdir -p /home/pi/log
+	mkdir -p ${HOME}/mac-addresses
+	mkdir -p ${HOME}/log
 
 install:
 	cp scripts/tunnel /usr/local/bin/
