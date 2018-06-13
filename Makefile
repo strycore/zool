@@ -1,5 +1,6 @@
 deps:
-	apt install -y supervisor autossh wakeonlan python3-dev python3-setuptools
+	apt install -y supervisor autossh wakeonlan python3-dev \
+		python3-setuptools tcpdump raspberrypi-kernel-headers
 
 setup: deps
 	mkdir -p ${HOME}/mac-addresses

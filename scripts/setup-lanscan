@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+pip3 install lanscan
+pip3 install scapy
+
+# lanscan needs special permissions, to be able to open a raw socket. You may
+# run it as root - not recommended - or you set the necessary capabilities (man
+# 7 capabilities). The capability needed is cap_net_raw=eip and this needs to
+# be set on the python interpreter used and the tcpdump binary using setcap.
+# setcap cannot work on symlinks, so the real binary is needed. setcap needs to
+# be run with superuser privileges:
+setcap cap_net_raw=eip "$(readlink -f "$(which python3)")"
+setcap cap_net_raw=eip "$(which tcpdump)"
