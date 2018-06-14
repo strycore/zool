@@ -5,6 +5,9 @@ import schedule
 
 from zool import notifications
 
+# IP address of the host to ping, set to the IP of the machine you turn on in the morning
+DEST_HOST = '192.168.0.14'
+
 
 def ping_machine(host):
     """Check if machine `host` responds to pings."""
@@ -22,7 +25,7 @@ def is_alive(host):
 
 def wake_up_job():
     """Schedule job to wake up people"""
-    if is_alive("192.168.0.2"):
+    if is_alive(DEST_HOST):
         print("Host is up, and I assume he is too")
         # Host is running, cancel alarms
         return schedule.CancelJob
